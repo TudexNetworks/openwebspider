@@ -125,7 +125,7 @@ module.exports = function (req, res, queryStringObj, done)
         }
         else
         {
-            buf += results.length + ' results in ' + (ms / 1000) + ' seconds | <a href="' + req.url + '&t=json" target="_blank">JSON</a></p>';
+            buf += results.length + ' resultados en ' + (ms / 1000) + ' segundos | <a href="' + req.url + '&t=json" target="_blank">JSON</a></p>';
             for (var i = 0; i < results.length; i++)
             {
                 buf += resultTemplate.replace(/<!-- page-url -->/g, results[i]["page"])
@@ -134,6 +134,7 @@ module.exports = function (req, res, queryStringObj, done)
                     .replace(/<!-- page-relevancy -->/g, results[i]["relevancy"]);
             }
         }
+
         return buf;
     }
 
