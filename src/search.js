@@ -119,7 +119,7 @@ module.exports = function (req, res, queryStringObj, done)
     function resultsToHTML(results, ms)
     {
         var buf = '<p class="results-head"> ';
-        if (results.length === 0)
+        if (results.length == 0)
         {
             buf += "No result found! </p>";
         }
